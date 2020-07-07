@@ -1,15 +1,23 @@
 <template>
     <div class="home">
-        <VTCard v-for="video in videos" :key="video.id" :video="video" />
+        <b-container>
+            <lastnews />
+            <BannerCar />
+            <VTCard v-for="video in videos" :key="video.id" :video="video" />
+        </b-container>
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import lastnews from '@/components/lastnews.vue'
+import BannerCar from '@/components/BannerCar.vue'
 import VTCard from '@/components/VTCard.vue'
 export default {
     components: {
         VTCard,
+        BannerCar,
+        lastnews,
     },
     async fetch({ store, error }) {
         try {
