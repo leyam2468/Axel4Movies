@@ -30,6 +30,7 @@ export default {
     height: 250px;
     display: inline-flex;
     background-color: red;
+    color: white;
     margin: 5px;
 }
 </style>
