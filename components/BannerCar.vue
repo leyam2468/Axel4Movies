@@ -47,6 +47,9 @@ export default {
             sliding: null,
         }
     },
+    computed: mapState({
+        videos: (state) => state.videos.videos.results,
+    }),
     methods: {
         onSlideStart(slide) {
             this.sliding = true
@@ -55,9 +58,6 @@ export default {
             this.sliding = false
         },
     },
-    computed: mapState({
-        videos: (state) => state.videos.videos.results,
-    }),
 }
 </script>
 
